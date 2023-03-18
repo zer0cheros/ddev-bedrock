@@ -1,0 +1,33 @@
+# Translation of Plugins - SVGator &#8211; Add Animated SVG Easily - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - SVGator &#8211; Add Animated SVG Easily - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-01-28 10:40:53+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - SVGator &#8211; Add Animated SVG Easily - Stable (latest release)\n"
+
+#: includes/class/WP_SVGator/Widget_Media_SVGator.php:31
+msgid "Displays an animated SVG."
+msgstr "Visar en animerad SVG."
+
+#. Author URI of the plugin
+msgid "https://www.svgator.com"
+msgstr "https://www.svgator.com"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+msgid "SVGator"
+msgstr "SVGator"
+
+#. Description of the plugin
+msgid "Import your animated SVGs from SVGator.com"
+msgstr "Importera dina animerade SVG:er från SVGator.com"
+
+#. Plugin URI of the plugin
+msgid "https://www.svgator.com/help/getting-started/how-to-add-svg-to-wordpress"
+msgstr "https://www.svgator.com/help/getting-started/how-to-add-svg-to-wordpress"
