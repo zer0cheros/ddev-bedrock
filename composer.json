@@ -47,6 +47,7 @@
     "wpackagist-plugin/svgator": "^1.2",
     "koodimonni-language/fi": "*",
     "woocommerce/woocommerce" : "*",
+    "wpsyntex/polylang" : "*",
     "koodimonni-language/sv_se": "*"
   },
   "require-dev": {
