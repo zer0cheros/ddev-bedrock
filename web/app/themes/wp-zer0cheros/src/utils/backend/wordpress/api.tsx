@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import apiRequest from '@/utils/frontend/api-request';
-import Page from '@/types/types';
+import apiRequest from '../../frontend/api-request';
+import Page from '../../../types/types';
 
 export async function getPages(){
     const response = await apiRequest.get(`/wp-json/wp/v2/pages`, {});
