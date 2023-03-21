@@ -17,12 +17,14 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
+    "parse-link-header": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.2",
     "wp-scripts": "^0.0.1-security"
   },
   "devDependencies": {
+    "@types/parse-link-header": "^2.0.1",
     "@wordpress/scripts": "^26.0.0"
   }
 }
