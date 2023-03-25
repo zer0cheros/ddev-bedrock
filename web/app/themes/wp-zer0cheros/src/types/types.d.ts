@@ -17,3 +17,6 @@ export default interface Page {
 	block_data?: Array<Block>
 	yoast_head_json?: YoastHead,
 }
+export default interface Menu {
+
+}

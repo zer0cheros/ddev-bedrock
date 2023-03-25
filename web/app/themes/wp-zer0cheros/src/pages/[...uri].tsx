@@ -1,4 +1,4 @@
-import { getPages, getPage } from '@/utils/backend/wordpress/api';
+import { getPages, getPage } from '@/utils/backend/wordpress/Pages';
 import Page from '@/types/types';
 import PageComponet from '@/componets/PageComponet/PageComponet';
 import Blocks from '@/componets/Blocks/Blocks';

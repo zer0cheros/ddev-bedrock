@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '@/componets/layout/Layout'
-import { getPages } from '@/utils/backend/wordpress/api'
+import { getPages } from '@/utils/backend/wordpress/Pages'
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
+import type Page from '@/types/types'
 
-const index = ({pages}) => {
+const index:React.FC<{pages: Page[]}> = ({pages}) => {
   return (
-    <Layout title='NextJs Wordpress cms' pages={pages}  />
+    <Layout title='NextJs Wordpress cms' pages={pages} lang={'en'} />
   )
 }
 
@@ -24,7 +25,7 @@ export async function getStaticProps(){
     const pages = await getPages()
     return {
         props: {
-            pages
+            pages,
         }
     }
 }
