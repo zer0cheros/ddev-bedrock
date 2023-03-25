@@ -11,7 +11,7 @@ interface LayoutProps {
     menu: Menu[]
 }
 
-const Layout = ({title, pages, lang, menu}:LayoutProps) => {
+const Layout = ({title, pages, lang}:LayoutProps) => {
   return (
     
     <div>
