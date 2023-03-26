@@ -32,7 +32,7 @@ const Layout = ({title, pages, lang}:LayoutProps) => {
     
       {pages.map(p=>(
         <div key={p.id}>
-          <a href={`${process.env.FRONTEND_API}/${lang}/${p.slug}`}>{p.title?.rendered}</a>
+          <a href={`http://localhost:3000/${lang}/${p.slug}`}>{p.title?.rendered}</a>
         </div>
     ))}
     </div>

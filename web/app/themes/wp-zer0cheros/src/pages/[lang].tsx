@@ -6,7 +6,7 @@ import type Page from '@/types/types'
 
 const index:React.FC<{pages: Page[]}> = ({pages}) => {
   return (
-    <Layout title='NextJs Wordpress cms' pages={pages} lang={'en'} />
+    <Layout title='NextJs Wordpress cms' pages={pages} lang={'en'} menu={[]} />
   )
 }
 
