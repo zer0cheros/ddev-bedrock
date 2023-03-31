@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest =  axios.create({
-  baseURL: 'https://wp-boilerplate.ddev.site',
+  baseURL: process.env.BACKEND_API,
   timeout: 30000,
   headers: {
     Accept: 'application/json',

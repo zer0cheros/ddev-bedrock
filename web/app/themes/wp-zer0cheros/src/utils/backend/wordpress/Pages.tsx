@@ -1,7 +1,5 @@
-import React from 'react'
-import parseLinkHeader from "parse-link-header";
 import apiRequest from '../../frontend/api-request';
-import Page from '../../../types/types';
+import {Page} from '@/types/types'
 
 export async function getPages(){
     const response = await apiRequest.get(`/wp-json/wp/v2/pages`);
@@ -16,6 +14,6 @@ export async function getPage(slug:string){
     if(response.status != 200){
         return new Error('Oops smoething went wrong');
     }
-    let result = await response.data;
+    let result: Array<Page> = await response.data;
     return result
 }

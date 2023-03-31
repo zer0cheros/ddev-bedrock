@@ -1,19 +1,17 @@
-import Page from '@/types/types'
-import Menu from '@/types/types'
+import {Page, Menu} from '@/types/types'
 import Head from 'next/head'
 import Header from './Header'
+import Footer from './Footer';
 
 
 interface LayoutProps {
-    title: string,
-    pages: Page[]
     lang: string,
-    menu: Menu[]
+    menus: Page[],
+    children: React.ReactNode;
 }
 
-const Layout = ({title, pages, lang}:LayoutProps) => {
+const Layout = ({menus, lang, children}:LayoutProps) => {
   return (
-    
     <div>
       <Head>
         <title>My Page Title | My Website</title>
@@ -27,14 +25,13 @@ const Layout = ({title, pages, lang}:LayoutProps) => {
         <meta name="twitter:title" content="My Page Title" />
         <meta name="twitter:description" content="This is my page description." />
         <meta name="twitter:image" content="https://mywebsite.com/images/my-page-image.jpg" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       </Head>
-      <title>{title}</title>
-    
-      {pages.map(p=>(
-        <div key={p.id}>
-          <a href={`http://localhost:3000/${lang}/${p.slug}`}>{p.title?.rendered}</a>
-        </div>
-    ))}
+      <Header lang={lang} menus={menus} />
+      <div className='w-full min-h-[80vh]'>
+      {children}
+      </div>
+      <Footer />
     </div>
   )
 }

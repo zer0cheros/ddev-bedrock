@@ -40,7 +40,7 @@ class PostTypes
     public function register()
     {
         $this->postTypes[] = $this->registerPost();
-        $this->postTypes[] = $this->registerPage();
+        //$this->postTypes[] = $this->registerPage();
         $this->postTypes[] = $this->registerCompany();
         $this->postTypes[] = $this->registerMenus();
         $this->postTypes[] = $this->registerPerson();
@@ -125,9 +125,8 @@ class PostTypes
     }
     public function registerMenus()
 {
-    // Register custom post type for Menus
     $type = new PostType('menu', [
-        'supports' => ['title', 'editor', 'thumbnail'],
+        'supports' => ['title', 'thumbnail', 'revisions', 'excerpt', 'editor', 'custom-fields'],
         'menu_icon' => 'dashicons-menu',
         'show_in_rest' => true,
         'public' => true,
@@ -147,15 +146,6 @@ class PostTypes
     ]);
     $type->taxonomy('menu_category');
     $type->register();
-
-    // Get all menus
-    $menus = wp_get_nav_menus();
-    // Loop through each menu and display its name and ID
-    foreach ($menus as $menu) {
-        echo $menu->name . ' - ' . $menu->term_id . '<br>';
-    }
-
-    // Set `has_archive` for compatibility with `post-type-archive-mapping`.
     add_filter('register_post_type_args', function ($args, $post_type) {
         if ($post_type === 'menu') {
             $args['has_archive'] = true;

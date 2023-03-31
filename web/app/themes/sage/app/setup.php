@@ -5,9 +5,8 @@
  */
 
 namespace App;
-require_once( get_template_directory() . '/app/custom.php' );
+
 use function Roots\bundle;
- 
 
 /**
  * Register the theme assets.
@@ -26,6 +25,7 @@ add_action('wp_enqueue_scripts', function () {
 add_action('enqueue_block_editor_assets', function () {
     bundle('editor')->enqueue();
 }, 100);
+
 /**
  * Register the initial theme setup.
  *
@@ -134,6 +134,3 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
-
-
-

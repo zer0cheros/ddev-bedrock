@@ -91,7 +91,9 @@
     ],
     "install:development": [
       "@composer install",
-      "wp plugin activate --all"
+      "wp plugin activate --all",
+      "cd ./web/app/themes/sage && sudo composer install && npm install",
+      "cd ./web/app/themes/wp-zer0cheros && npm install"
     ]
   }
 }

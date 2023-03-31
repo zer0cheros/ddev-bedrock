@@ -34,7 +34,7 @@ export default async (app) => {
      * Proxy origin (`WP_HOME`)
      * @see {@link https://bud.js.org/docs/bud.proxy/}
      */
-    .proxy('https://wp-boilerplate.ddev.site')
+    .proxy('http://example.test')
 
     /**
      * Development origin

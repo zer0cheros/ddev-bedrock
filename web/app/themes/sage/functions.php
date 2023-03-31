@@ -16,11 +16,8 @@ if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
 }
 
 require $composer;
-
-
-
-
-
+$role = get_role( 'administrator');
+$role->add_cap( 'edit_theme_options' );
 /*
 |--------------------------------------------------------------------------
 | Register The Bootloader
